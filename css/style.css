@@ -1,0 +1,141 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+*{box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+html, body{margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0;padding: 0;list-style: none;}
+a{text-decoration: none;}
+
+
+header{width: 100%; height: 60px; background-color: #111; position: fixed; top:0; z-index: 10;}
+header .wrap{height: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 40px;}
+header .wrap .logo{width: 110px;}
+header .wrap .logo a{}
+header .wrap .logo a img{display: block; height: 40px;}
+
+header .wrap nav{}
+header .wrap nav ul{display: flex;}
+header .wrap nav ul li{margin: 0 15px;}
+header .wrap nav ul li a{display: block; font-size: 16px; color:#ccc; line-height: 60px; transition:color 0.5s; position: relative;}
+header .wrap nav ul li:hover a{color:#fff;}
+header .wrap nav ul li a:after{content:""; display: block; width: 100%; height: 2px; background-color: #fff; opacity:0; transition: opacity 0.5s; position: absolute; bottom: 0; left: 0;}
+header .wrap nav ul li:hover a:after{opacity:1;}
+
+header .wrap .mypage{}
+header .wrap .mypage ul{display: flex;}
+header .wrap .mypage ul li{margin: 0 10px;}
+header .wrap .mypage ul li:last-child{margin-right: 0;}
+header .wrap .mypage ul li a{}
+header .wrap .mypage ul li a img{display: block; height: 20px; filter:invert(80%); transition: filter 0.5s;}
+header .wrap .mypage ul li:hover a img{ filter:invert(100%);}
+
+
+#main_banner{width: 100%; height: 840px; background: #000; overflow: hidden; position: relative;}
+#main_banner iframe{position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); width: 130%; height: 130%; }
+#main_banner .video_cover{position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);}
+#main_banner .video_cover a{position: absolute; left: 50%; bottom: 40px; transform: translateX(-50%);}
+#main_banner .video_cover a img{display: block; height: 50px; filter:invert(50%); transition: filter 0.5s;}
+
+#main_banner .video_cover a:hover img{filter:invert(0%);}
+
+
+
+section#newArrivals{padding: 100px 0 80px;}
+section#newArrivals .wrap{width: 1200px; margin: 0 auto;}
+
+section#newArrivals .wrap h2{font-size: 24px; color:#555; padding-bottom: 40px; text-align: center; font-weight: 500;}
+
+section#newArrivals .wrap .content{display: flex; flex-wrap: wrap;}
+section#newArrivals .wrap .content .box{width: calc(25% - 20px); height: 280px; margin: 0 10px 20px; border:1px solid #ddd; border-radius: 4px; overflow: hidden;}
+
+section#newArrivals .wrap .content .box:first-child{width: calc(50% - 20px);}
+
+section#newArrivals .wrap .content .box .bxbg{width: 100%; height: 100%; background-color: #eee; background-size: cover; background-position: 50% 50%; display: flex; justify-content: center; align-items: center;}
+
+section#newArrivals .wrap .content .box:first-child .bxbg{background-image: url(../img/newArrivalBg.jpg);} 
+
+section#newArrivals .wrap .content .box .bxbg .intro{width: 100%; padding: 20px; padding-right: 60px;}
+
+section#newArrivals .wrap .content .box .bxbg .img_cover{width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background-color: rgba(0,0,0,0.5); opacity:0; transition: opacity 0.5s;}
+
+section#newArrivals .wrap .content .box:hover .bxbg .img_cover{opacity: 1;}
+
+section#newArrivals .wrap .content .box .bxbg h3{color:#fff; font-size: 18px; padding-bottom: 20px; font-weight: 400;}
+section#newArrivals .wrap .content .box .bxbg p{color:#fff; font-size: 14px; font-weight: 300;}
+section#newArrivals .wrap .content .box .bxbg a{display: inline-block; width: 80px; line-height: 36px; border:1px solid #fff; border-radius:4px; text-align: center; font-size: 14px; color:#fff; margin-top: 10px; position: relative; z-index: 1; overflow: hidden;}
+section#newArrivals .wrap .content .box .bxbg a:before{content:""; position: absolute; z-index: -1; top:0; left:-100%; display: block; width: 100%; height: 100%; background-color: rgba(255,255,255,0.35); transition: left 0.5s;}
+section#newArrivals .wrap .content .box .bxbg a:hover:before{left: 0;}
+
+
+section.story{padding: 100px 0 80px;}
+section.story .wrap{width: 100%; padding: 0 40px;}
+section.story .wrap h2{font-size: 24px; color:#555; padding-bottom: 20px; text-align: center; font-weight: 500;}
+section.story .wrap p{font-size: 14px; color:#777; text-align: center; padding-bottom: 40px;}
+
+section.story .wrap .content{display: flex; justify-content: space-between; flex-wrap: wrap; text-align: center;}
+section.story .wrap .content .box{width: calc((100% - 40px) / 3); margin-bottom: 40px;}
+section.story .wrap .content .box .img_part{padding-bottom: 40px;}
+section.story .wrap .content .box .img_part img{width: 100%;}
+
+section.story .wrap .content .box .txt_part{height: 180px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; background-color: #e2e2e2; text-align: center;}
+
+section.story .wrap .content .box .txt_part h3{font-size: 20px; font-weight: 400; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+section.story .wrap .content .box .txt_part p{padding-bottom: 0; font-size: 14px; font-weight: 300; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+
+section.story .wrap .content .box .txt_part a{display: inline-block; width: 140px; line-height: 36px; text-align: center; background-color: #000; color:#fff; font-size: 16px; transition: background-color 0.5s;}
+section.story .wrap .content .box .txt_part a:hover{background-color: #555;}
+
+
+
+#mid_banner{padding: 80px 0;}
+#mid_banner .wrap{width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap;}
+#mid_banner .wrap > div{width: 50%; height: 300px;}
+
+#mid_banner .wrap > div.img_part{background-image: url(../img/run_puma.jpg);background-size: cover; background-position: 50% 50%;} 
+#mid_banner .wrap > div.txt_part{padding: 20px; background-color: #310; position: relative; z-index: 1;}
+#mid_banner .wrap > div.txt_part:before{content:""; position: absolute; top:20px; right:30px; display: block; width: 100px; height: 100px; background-color: #fff; border-radius:50%; filter:blur(90px); z-index: -1;}
+#mid_banner .wrap > div.txt_part:after{content:""; position: absolute; bottom:30px; left:10px; display: block; width: 60px; height: 60px; background-color: #fff; border-radius:50%; filter:blur(50px); z-index: -1;}
+
+#mid_banner .wrap > div.txt_part h3{font-size: 20px; font-weight: 500; padding-bottom: 30px; color:#fff;}
+#mid_banner .wrap > div.txt_part p{font-size: 14px; color:#fff; font-weight: 300; padding-bottom: 20px;}
+#mid_banner .wrap > div.txt_part button{display: block; width: 120px; line-height: 30px; border:1px solid #fff; text-align: center; font-size: 14px; color:#fff;background-color: transparent; transition: background-color 0.5s; cursor: pointer;}
+#mid_banner .wrap > div.txt_part button:hover{background-color: rgba(255,255,255,0.4);}
+
+
+footer{background-image: url(../img/footer_bg.jpg); background-size: cover; background-position: 50% 50%; overflow: hidden;}
+footer .dark{width: 100%; height: 100%; padding: 40px 0; background-color: rgba(0,0,0,0.5); position: relative;}
+
+footer .dark:before{content:""; position: absolute; top:40px; left:40px; display: block; width: 180px; height: 50px; background-image: url(../img/puma_logo_footer.png); background-size: contain; background-repeat: no-repeat; filter:brightness(0) invert(100%);}
+
+footer .dark:after{content:""; position: absolute; right:-20px; bottom:-20px; width: 400px; height: 80%; background-image: url(../img/puma-logo-red-line.svg); background-size: contain; background-position: 100% 100%; background-repeat: no-repeat; filter:brightness(0%) invert(20%); }
+
+footer .dark .wrap{width: 1200px; margin: 0 auto;}
+footer .dark .wrap .top{display: flex; flex-wrap: wrap; border-bottom: 1px solid #555;}
+footer .dark .wrap .top .box{width: 50%; padding: 0 10px 20px;}
+footer .dark .wrap .top .box h3{font-size: 16px; color:#fff; line-height: 39px; font-weight: 400; border-bottom: 1px solid #aaa;}
+footer .dark .wrap .top .box .lists{}
+footer .dark .wrap .top .box .lists ul{width: 100%; display: flex; flex-wrap: wrap; padding-top: 10px;}
+footer .dark .wrap .top .box .lists ul li{width:50%; padding-right: 20px; padding-bottom: 10px;}
+footer .dark .wrap .top .box .lists ul li a{display: inline-block; color:#aaa; font-size: 14px; transition: color 0.5s;}
+footer .dark .wrap .top .box .lists ul li:hover a{color:#fff;}
+
+footer .dark .wrap .bottom{padding-top: 20px;}
+footer .dark .wrap .bottom p{font-size: 14px; color:#ccc; text-align: center;}
+
+
+
+.pop_dark{position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0,0,0,0.5); z-index: -1; opacity:0;}
+.pop_dark.active{z-index: 11; opacity:1;}
+.popup{position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 500px; height: 300px; z-index: -1; opacity:0;}
+.popup.active{z-index: 11; opacity:1;}
+.popup .close{position: absolute; top:-60px; right:-60px; font-size: 50px; color:#bbb; font-weight: 200; cursor: pointer;}
+.popup .close:hover{color:#fff;}
+
+.popup .cover{position: relative;  width: 100%; height: 100%;  background-color: #000; overflow: hidden;}
+.popup .cover iframe{position: absolute; width: 120%; height: 120%; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+
+
+
